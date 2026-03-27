@@ -1,0 +1,42 @@
+# ********************************************************************************
+# Copyright (c) 2025 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Eclipse Public License 2.0 which is available at
+# https://www.eclipse.org/legal/epl-2.0
+#
+# SPDX-License-Identifier: EPL-2.0
+# ********************************************************************************
+
+decision_maker:
+    ros__parameters:
+        path_shift.min_object_ahead: 6.0        # [m] minimum distance
+        path_shift.max_object_ahead: 35.0       # [m] maximum distance to consider objects for shifting
+        path_shift.max_object_speed: 0.5       # [m/s] maximum speed
+        path_shift.static_clearance: 0.8       # [m] additional clearance to the object when calculating required shift
+        path_shift.front_clearance: 3.0       # [m] safety distance in
+        
+        path_shift.rear_clearance: 2.0        # [m] safety distance behind the object until the shift should be held
+        path_shift.approach_length: 15.0      # [m] length of the
+        path_shift.return_length: 18.0        # [m] length of the return phase after passing the object
+        path_shift.target_speed: 3.0         # [m/s] target speed during
+        path_shift.lookahead_length: 50.0    # [m] length of the path ahead to consider for shift decisions
+        
+        path_shift.max_shift_left: 4.0      # [m] maximum shift to
+        path_shift.route_overlap_slack: 0.2 # [m] tolerance for considering an object as overlapping the route
+        path_shift.oncoming_front_buffer: 20.0 # [m] buffer for oncoming
+        path_shift.oncoming_rear_buffer: 5.0  # [m] buffer for oncoming traffic behind
+        path_shift.min_oncoming_angle_diff: 2.0 # [rad] minimum angle difference to route for considering a vehicle as oncoming
+        
+        path_shift.prediction_time_step: 0.1    # [s] time step for predicting object trajectories
+        path_shift.prediction_time_horizon: 6.0  # [s] time horizon for
+        path_shift.min_ego_prediction_speed: 1.0     # [m/s] minimum predicted speed of ego vehicle to consider path shifting
+        path_shift.min_oncoming_route_speed: 0.2       # [m/s] minimum predicted speed of oncoming vehicle to consider it for path shifting
+        path_shift.max_stationary_conflict_route_speed: 0.3  # [m/s] maximum predicted speed of a vehicle in conflict with the route to be considered stationary and thus relevant for path shifting
+        
+        path_shift.oncoming_vehicle_s_margin: 1.0  # [m] additional margin for oncoming vehicles when calculating s-distance to the ego vehicle for path shifting decisions
+        path_shift.static_oncoming_s_margin: 1.0    # [m] additional margin for static objects when calculating s-distance to the ego vehicle for path shifting decisions
+        path_shift.ego_vehicle_s_margin: 1.0         # [m] additional margin for the ego vehicle when calculating s-distance to objects for path shifting decisions
